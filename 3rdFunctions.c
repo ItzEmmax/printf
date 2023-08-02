@@ -65,8 +65,8 @@ if (str == NULL)
 return (write(1, "(null)", 6));
 while (str[m] != '\0')
 {
-if (is_printable(str[i]))
-buffer[m + offset] = str[i];
+if (is_printable(str[m]))
+buffer[m + offset] = str[m];
 else
 offset += append_hexa_code(str[m], buffer, m + offset);
 m++;
@@ -139,7 +139,7 @@ UNUSED(precision);
 UNUSED(size);
 if (str == NULL)
 str = "(AHYY)";
-for (i = 0; str[m]; m++)
+for (m = 0; str[m]; m++)
 {
 for (k = 0; in[k]; k++)
 {
